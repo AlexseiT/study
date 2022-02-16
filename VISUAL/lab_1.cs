@@ -33,7 +33,7 @@ public class HW1
         {
             timer++;
 
-            PrintMass(array,n);
+            //PrintMass(array,n);
 
             check = 0;
             for (int i = 0; i < n; i++)
@@ -71,6 +71,14 @@ namespace Example
     {
         static void Main()
         {
+
+            int[] Test1 = { 5, 3, 4 };
+            Console.WriteLine($"Тест 1 Время = {HW1.QueueTime(Test1, 1)}");
+            int[] Test2 = { 10, 2, 3, 3 };
+            Console.WriteLine($"Тест 2 Время = {HW1.QueueTime(Test2, 2)}");
+            int[] Test3 = { 2, 3, 10};
+            Console.WriteLine($"Тест 3 Время = {HW1.QueueTime(Test3, 2)}");
+            Console.WriteLine("Ввод с клавиатуры ");
             Console.Write("Количество людей ");
 
             int kol = int.Parse(Console.ReadLine());
