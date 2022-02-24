@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "visproglab2", "visproglab2\visproglab2.csproj", "{07BB737C-ECA4-43F7-8C07-C4A00543C491}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{745B3DB6-B545-4DCB-AAEE-1A2797408215}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07BB737C-ECA4-43F7-8C07-C4A00543C491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07BB737C-ECA4-43F7-8C07-C4A00543C491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07BB737C-ECA4-43F7-8C07-C4A00543C491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07BB737C-ECA4-43F7-8C07-C4A00543C491}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D806EE2-D890-40C1-8B2E-E35F9FE9FF32}
+	EndGlobalSection
+EndGlobal
