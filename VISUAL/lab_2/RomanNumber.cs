@@ -5,7 +5,7 @@ public class RomanNumber : ICloneable, IComparable
     //Конструктор получает число n, которое должен представлять объект класса
     public RomanNumber(ushort n)
     {
-        if (n > 0) ch = n;
+        if (n > 0 || n < 4000) ch = n;
         else throw new RomanNumberException("Входные данные меньше или равны 0");
     }
     //Сложение римских чисел
