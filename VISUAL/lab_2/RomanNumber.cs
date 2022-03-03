@@ -11,25 +11,25 @@ public class RomanNumber : ICloneable, IComparable
     //Сложение римских чисел
     public static RomanNumber Add(RomanNumber? n1, RomanNumber? n2)
     {
-        if (n1 == null || n2 == null) throw new RomanNumberException("Неверные параметры");
+        if (n1 == null || n2 == null || n1.ch + n2.ch > 3999) throw new RomanNumberException("Неверные параметры");
         else return new RomanNumber((ushort)(n1.ch + n2.ch));
     }
     //Вычитание римских чисел
     public static RomanNumber Sub(RomanNumber? n1, RomanNumber? n2)
     {
-        if (n1 == null || n2 == null) throw new RomanNumberException("Неверные параметры");
+        if (n1 == null || n2 == null || n1.ch - n2.ch <= 0) throw new RomanNumberException("Неверные параметры");
         else return new RomanNumber((ushort)(n1.ch - n2.ch));
     }
     //Умножение римских чисел
     public static RomanNumber Mul(RomanNumber? n1, RomanNumber? n2)
     {
-        if (n1 == null || n2 == null) throw new RomanNumberException("Неверные параметры");
+        if (n1 == null || n2 == null || n1.ch * n2.ch > 3999 || n1.ch * n2.ch <= 0) throw new RomanNumberException("Неверные параметры");
         else return new RomanNumber((ushort)(n1.ch * n2.ch));
     }
     //Целочисленное деление римских чисел
     public static RomanNumber Div(RomanNumber? n1, RomanNumber? n2)
     {
-        if (n1 == null || n2 == null) throw new RomanNumberException("Неверные параметры");
+        if (n1 == null || n2 == null || n2.ch == 0 || n1.ch / n2.ch <= 0) throw new RomanNumberException("Неверные параметры");
         else return new RomanNumber((ushort)(n1.ch / n2.ch));
     }
     //Возвращает строковое представление римского числа
