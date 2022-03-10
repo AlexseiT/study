@@ -1,0 +1,42 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RomanNumberCalculator.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="RomanNumberCalculator.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="RomanNumberCalculator"
+		Height="450"
+		Width="450">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+	<Window.Styles>
+		<Style Selector="TextBox.textBox">
+			<Setter Property="Text" Value="{Binding CalcText}"/>
+		</Style>
+		<Style Selector="Button.button">
+			<Setter Property="Command" Value="{Binding OnClickCommand}"/>
+		</Style>
+	</Window.Styles>
+
+	<Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*,*,*,*">
+		<TextBox Classes="textBox" Focusable="False" IsUndoEnabled="False" FontSize="66" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" HorizontalContentAlignment="Left" VerticalContentAlignment="Center"></TextBox>
+		<Button Classes="button" CommandParameter="I"  FontSize="36" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">I</Button>
+		<Button Classes="button" CommandParameter="L"  FontSize="36" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">L</Button>
+		<Button Classes="button" CommandParameter="M"  FontSize="36" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">M</Button>
+		<Button Classes="button" CommandParameter="*"  FontSize="36" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">*</Button>
+		<Button Classes="button" CommandParameter="V" FontSize="36" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">V</Button>
+		<Button Classes="button" CommandParameter="C" FontSize="36" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">C</Button>
+		<Button Classes="button" CommandParameter="+" FontSize="36" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">+</Button>
+		<Button Classes="button" CommandParameter="/" FontSize="36" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">/</Button>
+		<Button Classes="button" CommandParameter="X" FontSize="36" Grid.Column="0" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">X</Button>
+		<Button Classes="button" CommandParameter="D" FontSize="36" Grid.Column="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">D</Button>
+		<Button Classes="button" CommandParameter="-" FontSize="36" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">-</Button>
+		<Button Classes="button" CommandParameter="=" FontSize="36" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">=</Button>
+	</Grid>
+
+</Window>
