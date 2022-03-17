@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RegexApp.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="RegexApp.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="RegexApp"
+	Height="450"
+	Width="450">
+	
+	<Window.Styles>
+		<Style Selector="Button.button">
+			<Setter Property="FontSize" Value="16"/>
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="VerticalAlignment" Value="Stretch"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+		</Style>
+	<Style Selector="TextBox.textbox">
+		<Setter Property="AcceptsReturn" Value="True"></Setter>
+			<Setter Property="TextWrapping" Value="Wrap"></Setter> 
+		</Style>
+			</Window.Styles>
+
+
+<Grid ColumnDefinitions="*,*" RowDefinitions="360,*,*">
+<TextBox Classes="textbox" Text="{Binding Input}" Grid.Column="0" Grid.Row="0"></TextBox>
+<TextBox Text="{Binding Output}" Focusable="False" Grid.Column="1" Grid.Row="0"></TextBox>
+<Button Classes="button" Name="openFileButton" Grid.Column="0" Grid.Row="1">Open File</Button>
+<Button Classes="button" Name="saveFileButton" Grid.Column="1" Grid.Row="1">Save File</Button>
+<Button Classes="button" Name="openRegexButton" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2">Set Regex</Button>
+	</Grid>
+
+</Window>
