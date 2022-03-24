@@ -1,0 +1,24 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+             x:Class="ToDoList.Views.AddView"
+			 Width="450"
+			 Height="450">
+	<UserControl.Styles>
+		<Style Selector="Button.button">
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="VerticalAlignment" Value="Stretch"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+		</Style>
+	</UserControl.Styles>
+	
+	<Grid RowDefinitions="* 6* * *" ColumnDefinitions="*">
+		<TextBox Text="{Binding Title}" Name="TitleInput" Grid.Row="0" Grid.Column="0" Watermark="Введите название заметки"></TextBox>
+		<TextBox Text="{Binding Description}"  Name="DescriptionInput" Grid.Row="1" Grid.Column="0" Watermark="Введите текст заметки"></TextBox>
+		<Button Name="OKButton" Classes="button" Grid.Row="2" Grid.Column="0" Command="{Binding Send}">OK</Button>
+		<Button Classes="button" Grid.Row="3" Grid.Column="0" Command="{Binding Cancel}">Cancel</Button>
+	</Grid>
+</UserControl>
